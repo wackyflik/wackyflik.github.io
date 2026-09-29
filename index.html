@@ -3,45 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wackyflik - Resume</title>
+    <title>wackyflik - Professional Resume</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 40px 20px; color: #333; }
-        h1 { color: #111; margin-bottom: 5px; }
-        .contact { color: #666; margin-bottom: 30px; }
-        .section { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
-        h2 { color: #0066cc; }
-        .job { margin-bottom: 15px; }
-        .job-title { font-weight: bold; }
-        .company-date { display: flex; justify-content: space-between; color: #555; font-style: italic; }
+        :root { --primary: #1e3a8a; --text: #334155; --bg: #f8fafc; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 40px 20px; }
+        .resume-container { max-width: 850px; margin: 0 auto; background: #fff; padding: 50px; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid var(--primary); padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { color: var(--primary); font-size: 2.5rem; margin: 0; font-weight: 700; letter-spacing: -0.05em; }
+        .subtitle { font-size: 1.1rem; color: #64748b; margin-top: 5px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .contact-info { text-align: right; font-size: 0.95rem; color: #475569; }
+        .contact-info a { color: var(--primary); text-decoration: none; }
+        .section { display: grid; grid-template-columns: 200px 1fr; margin-bottom: 35px; }
+        h2 { font-size: 1.1rem; color: var(--primary); text-transform: uppercase; margin: 0; letter-spacing: 0.05em; }
+        .job { margin-bottom: 25px; }
+        .job:last-child { margin-bottom: 0; }
+        .job-header { display: flex; justify-content: space-between; font-weight: 600; color: #0f172a; }
+        .company { color: #475569; font-style: italic; margin-bottom: 8px; }
+        ul { margin: 0; padding-left: 20px; color: var(--text); }
+        li { margin-bottom: 6px; }
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+        .badge { background: #e2e8f0; color: #334155; padding: 4px 12px; border-radius: 4px; font-size: 0.85rem; font-weight: 500; }
+        
+        @media print {
+            body { background: #fff; padding: 0; }
+            .resume-container { box-shadow: none; padding: 0; }
+            .badge { border: 1px solid #cbd5e1; background: none; }
+        }
+        @media (max-width: 650px) {
+            .header { flex-direction: column; }
+            .contact-info { text-align: left; margin-top: 15px; }
+            .section { grid-template-columns: 1fr; gap: 10px; }
+        }
     </style>
 </head>
 <body>
-    <h1>wackyflik</h1>
-    <div class="contact">Email: contact@example.com | GitHub: ://github.com</div>
-    
-    <div class="section">
-        <h2>Professional Summary</h2>
-        <p>A brief description of your background, skills, and what you are looking to achieve in your career.</p>
-    </div>
-
-    <div class="section">
-        <h2>Experience</h2>
-        <div class="job">
-            <div class="job-title">Your Job Title</div>
-            <div class="company-date">
-                <span>Company Name</span>
-                <span>2024 - Present</span>
+    <div class="resume-container">
+        <div class="header">
+            <div>
+                <h1>wackyflik</h1>
+                <div class="subtitle">Software Engineer / Professional Title</div>
             </div>
-            <ul>
-                <li>Achieved key results and handled primary responsibilities.</li>
-                <li>Collaborated with team members to execute projects successfully.</li>
-            </ul>
+            <div class="contact-info">
+                <div>📧 <a href="mailto:contact@example.com">contact@example.com</a></div>
+                <div>🌐 <a href="https://github.com" target="_blank">://github.com</a></div>
+                <div>📍 Location, Country</div>
+            </div>
         </div>
-    </div>
+        
+        <div class="section">
+            <h2>Summary</h2>
+            <p style="margin: 0;">A results-driven professional with expertise building scalable web platforms. Adept at turning complex infrastructure into seamless interfaces, optimizing deployment workflows, and collaborating across engineering divisions.</p>
+        </div>
 
-    <div class="section">
-        <h2>Skills</h2>
-        <p>HTML, CSS, JavaScript, Git, Project Management, Communication</p>
+        <div class="section">
+            <h2>Experience</h2>
+            <div>
+                <div class="job">
+                    <div class="job-header">
+                        <span>Senior Web Developer</span>
+                        <span>2024 - Present</span>
+                    </div>
+                    <div class="company">Tech Solutions Inc.</div>
+                    <ul>
+                        <li>Spearheaded integration initiatives improving platform speeds by 25%.</li>
+                        <li>Automated continuous staging structures saving team workflows 5 hours weekly.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <span class="badge">HTML5 / CSS3</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">Git & GitHub Pages</span>
+                <span class="badge">UI Design</span>
+                <span class="badge">Project Management</span>
+            </div>
+        </div>
     </div>
 </body>
 </html>
