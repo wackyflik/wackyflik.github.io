@@ -1,43 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Base structure and styling adapted from index-2.html[cite: 1] -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MUHD EIZAN SHAFIQ BIN ABD AZIZ</title>
     <style>
-        :root { --primary: #1e3a8a; --text: #334155; --bg: #f8fafc; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 40px 20px; }
-        .resume-container { max-width: 850px; margin: 0 auto; background: #fff; padding: 50px; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-        .header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid var(--primary); padding-bottom: 20px; margin-bottom: 30px; }
-        h1 { color: var(--primary); font-size: 2.5rem; margin: 0; font-weight: 700; letter-spacing: -0.05em; }
-        .subtitle { font-size: 1.1rem; color: #64748b; margin-top: 5px; text-transform: uppercase; letter-spacing: 0.05em; }
-        .contact-info { text-align: right; font-size: 0.95rem; color: #475569; }
-        .contact-info a { color: var(--primary); text-decoration: none; }
-        .section { display: grid; grid-template-columns: 200px 1fr; margin-bottom: 35px; }
-        h2 { font-size: 1.1rem; color: var(--primary); text-transform: uppercase; margin: 0; letter-spacing: 0.05em; }
-        .job { margin-bottom: 25px; }
-        .job:last-child { margin-bottom: 0; }
-        .job-header { display: flex; justify-content: space-between; font-weight: 600; color: #0f172a; }
-        .company { color: #475569; font-style: italic; margin-bottom: 8px; }
-        ul { margin: 0; padding-left: 20px; color: var(--text); }
-        li { margin-bottom: 6px; }
-        .skills-grid { display: flex; flex-wrap: wrap; gap: 8px; }
-        .badge { background: #e2e8f0; color: #334155; padding: 4px 12px; border-radius: 4px; font-size: 0.85rem; font-weight: 500; }
+        :root { 
+            --primary: #0f4c81; 
+            --primary-light: #e0e7ff;
+            --text-main: #1e293b; 
+            --text-muted: #64748b;
+            --bg: #f1f5f9; 
+        }
+        
+        body { 
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--bg); 
+            color: var(--text-main); 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 40px 20px; 
+        }
+        
+        .resume-container { 
+            max-width: 850px; 
+            margin: 0 auto; 
+            background: #fff; 
+            padding: 50px 60px; 
+            border-radius: 12px; 
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.01); 
+        }
+        
+        .header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: flex-start; 
+            border-bottom: 2px solid var(--primary-light); 
+            padding-bottom: 25px; 
+            margin-bottom: 35px; 
+        }
+        
+        h1 { 
+            color: var(--primary); 
+            font-size: 2.2rem; 
+            margin: 0; 
+            font-weight: 800; 
+            letter-spacing: -0.03em; 
+        }
+        
+        .subtitle { 
+            font-size: 1.05rem; 
+            color: var(--text-muted); 
+            margin-top: 8px; 
+            text-transform: uppercase; 
+            letter-spacing: 0.1em; 
+            font-weight: 600;
+        }
+        
+        .contact-info { 
+            text-align: right; 
+            font-size: 0.95rem; 
+            color: var(--text-muted); 
+            line-height: 1.8;
+        }
+        
+        .contact-info a { 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        
+        .contact-info a:hover {
+            color: #1e3a8a;
+        }
+        
+        .section { 
+            display: grid; 
+            grid-template-columns: 220px 1fr; 
+            margin-bottom: 40px; 
+        }
+        
+        h2 { 
+            font-size: 1.1rem; 
+            color: var(--primary); 
+            text-transform: uppercase; 
+            margin: 0; 
+            letter-spacing: 0.08em; 
+            font-weight: 700;
+        }
+        
+        .job { 
+            margin-bottom: 28px; 
+            position: relative;
+            padding-left: 20px;
+            border-left: 2px solid var(--primary-light);
+        }
+        
+        .job::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--primary);
+        }
+        
+        .job:last-child { 
+            margin-bottom: 0; 
+        }
+        
+        .job-header { 
+            display: flex; 
+            justify-content: space-between; 
+            font-weight: 700; 
+            color: var(--text-main); 
+            font-size: 1.1rem;
+        }
+        
+        .date {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .company { 
+            color: var(--primary); 
+            font-weight: 500; 
+            margin-top: 4px;
+            margin-bottom: 8px; 
+            font-size: 0.95rem;
+        }
+        
+        p.summary-text {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        
+        .skills-grid { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 10px; 
+        }
+        
+        .badge { 
+            background: var(--primary-light); 
+            color: var(--primary); 
+            padding: 6px 14px; 
+            border-radius: 20px; 
+            font-size: 0.85rem; 
+            font-weight: 600; 
+            letter-spacing: 0.02em;
+        }
         
         @media print {
             body { background: #fff; padding: 0; }
-            .resume-container { box-shadow: none; padding: 0; }
+            .resume-container { box-shadow: none; padding: 0; max-width: 100%; }
             .badge { border: 1px solid #cbd5e1; background: none; }
+            .job::before { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
         }
-        @media (max-width: 650px) {
-            .header { flex-direction: column; }
-            .contact-info { text-align: left; margin-top: 15px; }
-            .section { grid-template-columns: 1fr; gap: 10px; }
+        
+        @media (max-width: 768px) {
+            .header { flex-direction: column; gap: 20px; }
+            .contact-info { text-align: left; }
+            .section { grid-template-columns: 1fr; gap: 15px; }
+            h2 { border-bottom: 1px solid var(--primary-light); padding-bottom: 10px; }
         }
     </style>
 </head>
 <body>
     <div class="resume-container">
+        <!-- Header[cite: 1] -->
         <div class="header">
             <div>
                 <h1>MUHD EIZAN SHAFIQ BIN ABD AZIZ</h1>
@@ -45,33 +183,64 @@
             </div>
             <div class="contact-info">
                 <div>📧 <a href="mailto:eizan.aziz@gmail.com">eizan@uitm.edu.my</a></div>
-                <div>🌐 <a href="https://github.com" target="_blank">://github.com</a></div>
-                <div>📍 Selangor, Malaysia</div>
+                <div>🌐 <a href="https://github.com" target="_blank">github.com</a></div>
+                <div>📍 Pahang, Malaysia</div>
             </div>
         </div>
         
+        <!-- Summary Section[cite: 1] -->
         <div class="section">
             <h2>Summary</h2>
-            <p style="margin: 0;">A results-driven professional with expertise building scalable web platforms. Adept at turning complex infrastructure into seamless interfaces, optimizing deployment workflows, and collaborating across engineering divisions.</p>
+            <p class="summary-text">A results-driven academic and professional with expertise building scalable web platforms and delivering comprehensive computer science education. Adept at turning complex infrastructure into seamless interfaces, optimizing workflows, and collaborating across engineering divisions and academic faculties.</p>
         </div>
 
+        <!-- Experience Section -->
         <div class="section">
             <h2>Experience</h2>
             <div>
                 <div class="job">
                     <div class="job-header">
                         <span>Senior Lecturer</span>
-                        <span>2014 - Present</span>
+                        <span class="date">Jan 2026 - Present</span>
                     </div>
-                    <div class="company">Universiti Teknologi MARA Pahang Branch</div>
-                    <ul>
-                        <li>Spearheaded integration initiatives improving platform speeds by 25%.</li>
-                        <li>Automated continuous staging structures saving team workflows 5 hours weekly.</li>
-                    </ul>
+                    <div class="company">UiTM Pahang Branch Raub Campus</div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <span>Senior Lecturer</span>
+                        <span class="date">Mar 2023 - Dec 2025</span>
+                    </div>
+                    <div class="company">UiTM Selangor Branch Dengkil Campus</div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <span>Senior Lecturer</span>
+                        <span class="date">Oct 2015 - Mar 2023</span>
+                    </div>
+                    <div class="company">UiTM Pahang Branch Raub Campus</div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <span>Senior Lecturer</span>
+                        <span class="date">Mar 2014 - Oct 2015</span>
+                    </div>
+                    <div class="company">UiTM Pahang Branch Jengka Campus</div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <span>Lecturer</span>
+                        <span class="date">May 2008 - Mar 2014</span>
+                    </div>
+                    <div class="company">UiTM Pahang Branch Jengka Campus</div>
                 </div>
             </div>
         </div>
 
+        <!-- Skills Section[cite: 1] -->
         <div class="section">
             <h2>Skills</h2>
             <div class="skills-grid">
@@ -80,6 +249,7 @@
                 <span class="badge">Git & GitHub Pages</span>
                 <span class="badge">UI Design</span>
                 <span class="badge">Project Management</span>
+                <span class="badge">Academic Instruction</span>
             </div>
         </div>
     </div>
