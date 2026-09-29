@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Base structure and styling adapted from index-2.html[cite: 1] -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MUHD EIZAN SHAFIQ BIN ABD AZIZ</title>
+    <title>MUHD EIZAN SHAFIQ BIN ABD AZIZ - Resume</title>
     <style>
         :root { 
             --primary: #0f4c81; 
@@ -142,10 +141,23 @@
             line-height: 1.7;
         }
         
+        .skills-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .skill-category h3 {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+        
         .skills-grid { 
             display: flex; 
             flex-wrap: wrap; 
-            gap: 10px; 
+            gap: 8px; 
         }
         
         .badge { 
@@ -175,7 +187,6 @@
 </head>
 <body>
     <div class="resume-container">
-        <!-- Header[cite: 1] -->
         <div class="header">
             <div>
                 <h1>MUHD EIZAN SHAFIQ BIN ABD AZIZ</h1>
@@ -188,13 +199,11 @@
             </div>
         </div>
         
-        <!-- Summary Section[cite: 1] -->
         <div class="section">
             <h2>Summary</h2>
             <p class="summary-text">A results-driven academic and professional with expertise building scalable web platforms and delivering comprehensive computer science education. Adept at turning complex infrastructure into seamless interfaces, optimizing workflows, and collaborating across engineering divisions and academic faculties.</p>
         </div>
 
-        <!-- Experience Section -->
         <div class="section">
             <h2>Experience</h2>
             <div>
@@ -240,16 +249,54 @@
             </div>
         </div>
 
-        <!-- Skills Section[cite: 1] -->
         <div class="section">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <span class="badge">HTML5 / CSS3</span>
-                <span class="badge">JavaScript</span>
-                <span class="badge">Git & GitHub Pages</span>
-                <span class="badge">UI Design</span>
-                <span class="badge">Project Management</span>
-                <span class="badge">Academic Instruction</span>
+            <h2>Technical Skills</h2>
+            <div class="skills-wrapper">
+                <div class="skill-category">
+                    <h3>Programming & Markup Languages</h3>
+                    <div class="skills-grid">
+                        <span class="badge">C / C++ / C#</span>
+                        <span class="badge">PHP</span>
+                        <span class="badge">Python</span>
+                        <span class="badge">Java</span>
+                        <span class="badge">JavaScript / TypeScript</span>
+                        <span class="badge">HTML5 / CSS3</span>
+                        <span class="badge">SQL</span>
+                        <span class="badge">Visual Basic</span>
+                        <span class="badge">ColdFusion</span>
+                        <span class="badge">ActionScript</span>
+                        <span class="badge">COBOL</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Database Management (DBMS)</h3>
+                    <div class="skills-grid">
+                        <span class="badge">MySQL</span>
+                        <span class="badge">MariaDB</span>
+                        <span class="badge">PostgreSQL</span>
+                        <span class="badge">Oracle</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Database Design Tools</h3>
+                    <div class="skills-grid">
+                        <span class="badge">MySQL Workbench</span>
+                        <span class="badge">pgModeler</span>
+                        <span class="badge">Oracle Data Modeler</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Development Tools & Platforms</h3>
+                    <div class="skills-grid">
+                        <span class="badge">VS Code</span>
+                        <span class="badge">Docker</span>
+                        <span class="badge">Postman</span>
+                        <span class="badge">Git / GitHub</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
